@@ -12,7 +12,7 @@ function typeWriter() {
         e.push(char)
         container.innerHTML = e.join('');
         charindex++;
-        setTimeout(typeWriter, 200);
+        setTimeout(typeWriter, 225);
     }
 
     if (phrases[index].length === e.length) {
