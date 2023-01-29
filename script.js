@@ -7,6 +7,7 @@ const speed = 200;
 
 function typeWriter() {
     let char = phrases[index].charAt(charindex)
+    let currentWord = phrases
     if (0 < phrases[index].length) {
         e.push(char)
         container.innerHTML = e.join('');
@@ -16,8 +17,12 @@ function typeWriter() {
 
     if (phrases[index].length === e.length) {
         charindex = 0;
-        e.shift();
+        e = []
         index++;
+    }
+
+    if (index === phrases.length) {
+        index = 0
     }
 }
 
